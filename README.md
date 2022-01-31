@@ -9,12 +9,18 @@ Automated grading of homework assignments and tests
 # Problems
 - ## read_data
 
+```Python
+Input: "file_path"
+Output: data
+
+```
+
 - ## find_number_of_messages
   This function will read the json file and return the data as a dictionary.
 
 ```Python
-Input: "file_path"
-Output: data
+Input: data
+Output: num_messages
 
 ```
 
