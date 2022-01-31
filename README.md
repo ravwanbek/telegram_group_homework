@@ -1,5 +1,5 @@
 # Welcome
-# LIST Indexing
+# Telegram Group Project
 
 Automated grading of homework assignments and tests
 - fork this repository
