@@ -21,7 +21,7 @@ def find_all_users_id(data: dict)->list:
                     list.append(a)
             
 
-    return len(list)
+    return list
 
 data=read_data('data/result.json')
 print(find_all_users_id(data))
