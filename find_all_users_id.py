@@ -9,4 +9,25 @@ def find_all_users_id(data: dict)->list:
     Returns:
         list: List containing all the users id
     """
-    return
+    y = data.get("messages")
+    list=[]
+    
+    for i in y:
+        for j in i.values():
+            if j=='join_group_by_request' or j=='join_group_by_link':
+
+                a=i.get("actor_id")
+                list.append(a)
+            if j=='remove_members':
+                b=i.get("actor_id")
+                list.remove(b)
+
+    
+    return list
+
+
+
+data=read_data('data/result.json')
+print(find_all_users_id(data))
+
+
