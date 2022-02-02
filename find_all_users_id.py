@@ -18,14 +18,9 @@ def find_all_users_id(data: dict)->list:
 
                 a=i.get("actor_id")
                 list.append(a)
-            if j=='remove_members':
-                b=i.get("actor_id")
-                list.remove(b)
+            
 
-    
     return list
-
-
 
 data=read_data('data/result.json')
 print(find_all_users_id(data))
