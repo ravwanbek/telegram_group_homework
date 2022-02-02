@@ -14,13 +14,14 @@ def find_all_users_id(data: dict)->list:
     
     for i in y:
         for j in i.values():
-            if j=='join_group_by_request' or j=='join_group_by_link':
+            if j=='join_group_by_request' or j=='join_group_by_link' or j=='migrate_to_supergroup' or j== 'migrate_from_group' or j=='invite_members':
 
                 a=i.get("actor_id")
-                list.append(a)
+                if a not in list:
+                    list.append(a)
             
 
-    return list
+    return len(list)
 
 data=read_data('data/result.json')
 print(find_all_users_id(data))
